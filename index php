@@ -1,0 +1,41 @@
+<?php
+$name = "رحاب هيثم محمد";
+$major = "دبلوم نظم معلومات";
+$bio = "طالبة نظم معلومات - مهتمة ببرمجة الويب PHP";
+$skills = ["PHP", "MySQL", "HTML", "CSS"];
+?>
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بروفايل رحاب</title>
+<style>
+body{font-family:Tahoma,sans-serif; background:#f0f7ff; margin:0; color:#333}
+.container{max-width:800px; margin:30px auto; background:#fff; padding:25px; border-radius:20px}
+header{text-align:center; border-bottom:2px solid #eee; padding-bottom:20px}
+.job{color:#007bff; font-weight:bold; font-size:18px}
+.skills{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin:15px 0}
+.skill{background:#007bff; color:#fff; padding:6px 14px; border-radius:20px}
+.card{background:#f8f9ff; border-right:4px solid #007bff; padding:15px; border-radius:10px; margin:15px 0}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1><?php echo $name; ?></h1>
+<div class="job"><?php echo $major; ?></div>
+<p><?php echo $bio; ?></p>
+</header>
+<h3>المهارات</h3>
+<div class="skills">
+<?php foreach($skills as $s){ echo "<span class=skill>$s</span>"; } ?>
+</div>
+<div class="card">
+<h3>عن المشروع</h3>
+<p>تم تنفيذ هذا المشروع باستخدام لغة PHP حسب متطلبات المادة</p>
+<p>التاريخ: <?php echo date("Y-m-d"); ?></p>
+</div>
+</div>
+</body>
+</html>
